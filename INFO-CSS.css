@@ -98,13 +98,12 @@ body{
     left:600px;
  }
  .content .image img{
-   min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
+   min-width: 20%;
+    min-height: 20%;
     position: absolute; 
     top: 0; 
     left: 0; 
-    right: 0; 
+    right: 600px; 
     bottom: 0; 
     margin:auto;
  }
@@ -126,4 +125,14 @@ body{
       right:0;
       top:20px;
    }
+   .content .image img{
+      min-width: 0%;
+       min-height: 0%;
+       position: absolute; 
+       top: 800px; 
+       left: 0; 
+       right: 800px; 
+       bottom: 0; 
+       margin:auto;
+    }
 }
