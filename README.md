@@ -1,1 +1,1 @@
-# capsulepharamasy.github.io
+# capsulepharamacy.github.io
