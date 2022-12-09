@@ -93,19 +93,112 @@ nav ul li a:hover{
     top:110px;
     text-align: center;
 
-    height:600px;;
+    height:1300px;
     width:450px;
     border-radius: 10px;
     border:solid rgba(107, 107, 107, 0.35) 1px;
 
 }
+
 #Sign_up_content h1{
     position:relative;
     top:40px;
 }
+#Sign_up_content #AHAA{
+    position:relative;
+    top:110px;
+    left:52px;
+}
+#Sign_up_content #FNamePH{
+    position: relative;
+    top:70px;
+    right:125px;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight:bold;
+    margin: 30px 0 0;
+}
+#Sign_up_content #FName{
+    position:relative;
+    top:72px;
+    right:-2px;
+    height:30px;
+    width:300px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin: 6px 0;
+    padding: 14px;
+}
+#Sign_up_content #LNamePH{
+    position: relative;
+    top:70px;
+    right:125px;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight:bold;
+    margin: 30px 0 0;
+}
+#Sign_up_content #LName{
+    position:relative;
+    top:72px;
+    right:-2px;
+    height:30px;
+    width:300px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin: 6px 0;
+    padding: 14px;
+}
+#Sign_up_content #BDMYPH{
+    position: relative;
+    top:70px;
+    right:145px;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight:bold;
+    margin: 30px 0 0;
+}
+#Sign_up_content #BDMY{
+    position:relative;
+    top:72px;
+    right:-2px;
+    height:30px;
+    width:300px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin: 6px 0;
+    padding: 14px;
+    font-size: larger;
+    
+}
+#Sign_up_content #phone{
+    position:relative;
+    top:80px;
+    right:-2px;
+    height:30px;
+    width:300px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin: 6px 0;
+    padding: 14px;
+}
+#Sign_up_content #PhoneNUMPH{
+    position: relative;
+    top:70px;
+    right:125px;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight:bold;
+    margin: 30px 0 0;
+}
+
 #Sign_up_content #email{
     position:relative;
-    top:35px;
+    top:90px;
     right:-2px;
     height:30px;
     width:300px;
@@ -117,22 +210,30 @@ nav ul li a:hover{
 }
 #Sign_up_content #EmailPH{
     position: relative;
-    top:70px;
+    top:90px;
     right:140px;
     font-family: Source Sans Pro;
     font-size: 16px;
     font-weight:bold;
     margin: 30px 0 0;
 }
-#Sign_up_content #AHAA{
-    position:relative;
-    top:45px;
-    left:52px;
-}
+
 #Sign_up_content #password{
     position:relative;
-    top:22px;
-    right:-2px;
+    bottom:280px;
+    left:105px;
+    height:30px;
+    width:300px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin: 6px 0;
+    padding: 14px;
+}
+#Sign_up_content #passwordCONFIRM{
+    position:relative;
+    bottom:260px;
+    left:105px;
     height:30px;
     width:300px;
     background-color: #fff;
@@ -143,8 +244,17 @@ nav ul li a:hover{
 }
 #Sign_up_content #PasswordPH{
     position: relative;
-    top:20px;
+    top:78px;
     right:126px;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight:bold;
+    margin: 30px 0 0;
+}
+#Sign_up_content #PasswordCONFIRMPH{
+    position: relative;
+    top:125px;
+    right:78px;
     font-family: Source Sans Pro;
     font-size: 16px;
     font-weight:bold;
@@ -153,7 +263,7 @@ nav ul li a:hover{
 
 #Sign_up_content #SIGNUP{
     position:relative;
-    top:20px;
+    top:-50px;
     height:50px;
     width:150px;
     border: 1px solid #ced4da;
@@ -175,7 +285,7 @@ nav ul li a:hover{
 }
 #Sign_up_content #PolicyNTerms{
     position: relative;
-    top:25px;
+    top:-10px;
     line-height: 20px;
 }
 /*FOOTER*/

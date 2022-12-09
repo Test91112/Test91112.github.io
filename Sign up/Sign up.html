@@ -6,8 +6,19 @@
   <title>Capsule Pharmacy</title>
   <link rel="icon" type="image/x-icon" href="../images/icon.ico">
   <script src="https://kit.fontawesome.com/f98208c8c8.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+  />
+  <link
+  rel="stylesheet"
+  href="Sign up PH.css"
+/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 <body>
+  
    <div class="navbar">
       <nav>
         <h1>Capsule<br><br> Pharmacy</h1>
@@ -36,21 +47,43 @@
 <div id="Sign_up_content">
   <h1>Sign up</h1>
   <form action="/action_page.php">
-    <p id="EmailPH">Email</p>
     <p id="AHAA">Already have an account? <a href="..\Sign in\Sign in.html" style= color:#05a1a8;><b>Sign in</b></a></p>
+    <p id="FNamePH">First Name</p>
+    <input type="name" id="FName" placeholder="" pattern="(A-Z)(a-z)" required>
+    <p id="LNamePH">Last Name</p>
+    <input type="name" id="LName" placeholder="" pattern="(A-Z)(a-z)" required>
+    <p id="BDMYPH" type="date">Age</p>
+    <input type="date" id="BDMY">
+    <p id="PhoneNUMPH">Phone Number</p>
+    <input id="phone" type="tel" name="phone" />
+    <p id="EmailPH">Email</p>
     <input type="email" id="email" placeholder=""><br>
     <p id="PasswordPH">Password</p>
-    <input type="password" id="password" placeholder=""><br><br>
+    <p id="PasswordCONFIRMPH">Confirm your Password</p>
+    <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>
+    
     <div id="requirements">
-    <i class="fa-solid fa-circle"style="font-size:7px; position: relative; right:60px; top:22px; color: #05a1a8;"></i><p>     At least one number</p>
-    <i class="fa-solid fa-circle"style="font-size:7px; position: relative; right:60px; top:20px; color: #05a1a8;"></i><p>         8 characters minimum</p>
-    <i class="fa-solid fa-circle" style="font-size:7px; position: relative; right:60px; top:22px; color: #05a1a8;"></i><p>                         At least one lowercase character</p>
+    <i class="fa-solid fa-circle"style="font-size:7px; position: relative; right:60px; top:82px; color: #05a1a8;"></i><p style="position:relative; top:62px;">     At least one number</p>
+    <i class="fa-solid fa-circle"style="font-size:7px; position: relative; right:60px; top:82px; color: #05a1a8;"></i><p style="position:relative; top:62px;">         8 characters minimum</p>
+    <i class="fa-solid fa-circle" style="font-size:7px; position: relative; right:60px; top:82px; color: #05a1a8;"></i><p style="position:relative; top:62px;">                         At least one lowercase character</p>
+    <i class="fa-solid fa-circle" style="font-size:7px; position: relative; right:60px; top:82px; color: #05a1a8;"></i><p style="position:relative; top:62px;">                      At least one Special character</p>
+    <input type="password" id="password">
+    <input type="password" id="passwordCONFIRM">
     </div>
     <input type="submit" id="SIGNUP" value="SIGN UP">
     <p id="PolicyNTerms">By clicking the "Sign up for free" button, you are creating an account, and agree to W3Schools' <a href="..\Terms and Service\Terms and Service.html" style= color:#05a1a8;><b>Terms and Service</b></a> and <a href="..\Privacy Policy\Privacy Policy.html" style= color:#05a1a8;><b>Privacy Policy</b></a></p>
+
   </form>
 </div>
+
 </div>
+<script>
+  const phoneInputField = document.querySelector("#phone");
+  const phoneInput = window.intlTelInput(phoneInputField, {
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>  
 <footer>
   <div id="footer">
