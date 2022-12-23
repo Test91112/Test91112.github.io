@@ -106,14 +106,15 @@ html{
     border-radius: 5px;
     border-color:rgba(0,0,0,0.19);
     background-color:rgba(0,0,0,0.19);
-    height:568px;
+    /*height:568px;*/
+    height:100vh
 }
 #BPimg{
     position: relative;
     left:55%;
     border-radius: 5px;
     width: 40%;
-    bottom: 50px;
+    bottom: 100px;
 }
 #BPHead{
     position: relative;
@@ -140,6 +141,26 @@ html{
     font-size:20px;
     color:rgb(66, 65, 65);
 }
+#moreinfo1
+{
+    position: relative;
+    top:80px;
+    left:50px;
+    padding: 16px 20px;
+    background-color: #05a1a8;
+    font-family: Nunito;
+    transition-duration: 0.4s;
+    font-size: 20px;
+    z-index:1;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+#moreinfo1:hover
+{
+  color: white;
+  cursor: pointer;
+  font-size: 21px;
+}
 #wrapper2{
     position: relative;
     bottom:60px;
@@ -147,7 +168,8 @@ html{
     border-radius: 5px;
     border-color:rgba(0,0,0,0.19);
     background-color:rgba(0,0,0,0.19);
-    height:568px;
+    /*height:568px;*/
+    height:100vh
 }
 #gluchead
 {
@@ -186,9 +208,8 @@ html{
     left:0%;
     border-radius: 5px;
     width: 40%;
-    bottom: 206px;
+    bottom: 100px;
 }
-
 #Weightservice
 {
     position: relative;
@@ -196,6 +217,26 @@ html{
     margin:10px 20px;
     font-size:20px;
     color:rgb(66, 65, 65);
+}
+#moreinfo2
+{
+    position: relative;
+    top:80px;
+    left:50px;
+    padding: 16px 20px;
+    background-color: #05a1a8;
+    font-family: Nunito;
+    transition-duration: 0.4s;
+    font-size: 20px;
+    z-index:1;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+#moreinfo2:hover
+{
+  color: white;
+  cursor: pointer;
+  font-size: 21px;
 }
 #wrapper3
 {
@@ -205,7 +246,8 @@ html{
     border-radius: 5px;
     border-color:rgba(0,0,0,0.19);
     background-color:rgba(0,0,0,0.19);
-    height:568px;
+    /*height:568px;*/
+    height:100vh
 }
 #Weighthead
 {
@@ -235,6 +277,26 @@ html{
     width: 40%;
     bottom: 17px;
 }
+#moreinfo3
+{
+    position: relative;
+    top:120px;
+    left:50px;
+    padding: 16px 20px;
+    background-color: #05a1a8;
+    font-family: Nunito;
+    transition-duration: 0.4s;
+    font-size: 20px;
+    z-index:1;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+#moreinfo3:hover
+{
+  color: white;
+  cursor: pointer;
+  font-size: 21px;
+}
 #wrapper4
 {
     position: relative;
@@ -243,7 +305,8 @@ html{
     border-radius: 5px;
     border-color:rgba(0,0,0,0.19);
     background-color:rgba(0,0,0,0.19);
-    height:568px;
+    /*height:568px;*/
+    height:100vh
 }
 #deliveryservice
 {
@@ -287,20 +350,159 @@ html{
 #shopnowbutton
 {
     position: relative;
-    left:50%;
-    bottom:60%;
+    top:120px;
+    left:50px;
     padding: 16px 20px;
+    background-color:rgba(0,0,0,0.0);
     font-family: Nunito;
     transition-duration: 0.4s;
     font-size: 20px;
+    z-index:1;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
-
 #shopnowbutton:hover
 {
   background-color: #05a1a8;
   color: white;
   cursor: pointer;
   font-size: 21px;
+}
+
+
+
+:root {
+    --EASE_INOUT_QUAD: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    --EASE_IN_QUAD: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    --EASE_OUT_QUAD: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    --COLOR_UI_PHARMACY: #237db5;
+    --loaderPill_DURATION: 1800ms;
+}
+
+.absCenter {
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: linear-gradient(#05a1a8,#ffffff);
+    transform: translate(-50%, -50%);
+    z-index:2;
+}
+
+.loaderPill {
+    text-align: center;
+    position: relative;
+    top:200px;
+
+
+}
+
+.loaderPill-anim {
+    height: 160px;
+}
+
+.loaderPill-anim-bounce {
+    animation: loaderPillBounce var(--loaderPill_DURATION) linear infinite;
+}
+
+.loaderPill-anim-flop {
+    transform-origin: 50% 50%;
+    animation: loaderPillFlop var(--loaderPill_DURATION) linear infinite;
+}
+
+.loaderPill-pill {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--COLOR_UI_PHARMACY);
+    background-image: linear-gradient(to right, var(--COLOR_UI_PHARMACY) 50%, #ffffff 50%);
+}
+
+.loaderPill-floor {
+    display: block;
+    text-align: center;
+}
+
+.loaderPill-floor-shadow {
+    display: inline-block;
+    width: 70px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: color(var(--COLOR_UI_PHARMACY) alpha(26%));
+    transform: translateY(-15px);
+    animation: loaderPillScale var(--loaderPill_DURATION) linear infinite;
+}
+
+.loaderPill-text {
+    font-weight: bold;
+    color: var(--COLOR_UI_PHARMACY);
+    text-transform: uppercase;
+}
+
+@keyframes loaderPillBounce {
+    0% {
+        transform: translateY(123px);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    25% {
+        transform: translateY(40px);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    50% {
+        transform: translateY(120px);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    75% {
+        transform: translateY(20px);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    100% {
+        transform: translateY(120px);
+    }
+}
+
+@keyframes loaderPillFlop {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(450deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes loaderPillScale {
+    0%   {
+        transform: translateY(-15px) scale(1, 1);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    25%  {
+        transform: translateY(-15px) scale(0.7, 1);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    50%  {
+        transform: translateY(-15px) scale(1, 1);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    75%  {
+        transform: translateY(-15px) scale(0.6, 1);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    100% {
+        transform: translateY(-15px) scale(1, 1);
+    }
 }
 /*FOOTER*/
 footer{

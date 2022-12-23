@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="Home.css">
 <head>
+  <title>Capsule Pharmacy</title>
+  <!-- To Support Arabic Language in website-->
   <meta charset="utf-8"/>
   <meta name="google-site-verification" content="AK_U4GQ4x1QJv7TqX3Ffw23UkcaEvCreKUQPtkr4WHg" />
+  <!--Our website description for google search-->
   <meta name="description"content="Order your medication from Capsule Pharmacy 24 hours a day, 7 days a week. Pay online or in cash at the time of delivery, use your medical insurance, and we will deliver your medication right to your door!"/>
-  <title>Capsule Pharmacy</title>
-  <link rel="icon" type="image/x-icon" href="../images/icon.ico">
-  <script src="https://kit.fontawesome.com/f98208c8c8.js" crossorigin="anonymous"></script>
 
+  <link rel="icon" type="image/x-icon" href="../images/icon.ico">
+
+  <!--Our CSS files/URLs-->
+  <link rel="stylesheet" href="Home.css">
+
+  <!--Our JS files/URLs-->
+  <script src="https://kit.fontawesome.com/f98208c8c8.js" crossorigin="anonymous"></script><!-- Ready made functions for icons ex:Location/Email or phone-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="Home.js"></script>
 </head>
+
 <body>
+  <!-- BASICS for the website <NAVBAR>(HOME)-->
    <div class="navbar">
       <nav>
         <h1>Capsule<br><br> Pharmacy</h1>
@@ -34,7 +44,7 @@
     </li>
  </ul>
 </nav>
-
+  <!-- THE END <NAVBAR> -->
 <a href="#wrapper"> 
   <button id="ourservices">Our Services</button> 
 </a>
@@ -44,36 +54,70 @@
 <h1 class="logoword"></h1>
 </div>
 <div id="wrapper">
+  <div class="fade">
 <h5 id="BPService">Our Services</h5>
 <h1 id="BPHead">Blood Pressure</h1>
 <p id="BPPara">Blood pressure (BP) is the pressure of circulating blood against the walls of blood vessels.<br> Most of this pressure results from the heart pumping blood through the circulatory system.<br> When used without qualification, the term "blood pressure" refers to the pressure in the large arteries.</p>
 <img id="BPimg" src="..\Images\Home\BP.jpg">
+<a href="#wrapper2"> 
+  <button id="moreinfo1">More Info</button> 
+</a>
+</div>
 </div>
 <div id="wrapper2">
+  <div class="fade">
   <h5 id="BloodGucservice">Our Services</h5>
   <h1 id="gluchead"> Blood Glucose</h1>
   <p id="glucpara">The blood glucose level is the amount of glucose in the blood.<br> Glucose is a sugar that comes from the foods we eat, and it's also formed and stored inside the body.<br> It's the main source of energy for the cells of our body, and it's carried to each cell through the bloodstream.</p>
-   <img id="BloodGlucimg" src="..\Images\Home\BloodGlu.jpg">
+  <img id="BloodGlucimg" src="..\Images\Home\BloodGlu.jpg">
+  <a href="#wrapper3"> 
+    <button id="moreinfo2">More Info</button> 
+  </a>
+  </div>
 </div>
 
 
 <div id="wrapper3">
+  <div class="fade">
   <h5 id="Weightservice">Our Services</h5>
   <h1 id="Weighthead">Weight Measurement</h1>
   <p id="weightpara">There is a weight and height measuring device in all our pharmacies<br> with some analyzes of your body that will help you understand your needs</p>
   <img id="weightimg" src="..\Images\Home\WeightScale.jpg">
+  <a href="#wrapper4"> 
+    <button id="moreinfo3">More Info</button> 
+  </a>
+</div>
 </div>
 <div id="wrapper4">
+  <div class="fade">
   <h5 id="deliveryservice">Our Services</h5>
   <h1 id="deliveryhead">Home Delivery</h1>
   <p id="deliverypara">We deliver our products to your location,<br> just call us at 1111 to order your product, or order online</p>
   <img id="deliveryimg" src="..\Images\Home\Homedelivery.jpg">
-  <a href="shop.html"> 
+  <a href="..\Shop\Shop.html"> 
     <button id="shopnowbutton"> Shop Now</button> 
   </a>
+  </div>
+</div>
+
+<div class="absCenter ">
+  <div class="loaderPill">
+      <div class="loaderPill-anim">
+          <div class="loaderPill-anim-bounce">
+              <div class="loaderPill-anim-flop">
+                  <div class="loaderPill-pill"></div>
+              </div>
+          </div>
+      </div>
+      <div class="loaderPill-floor">
+          <div class="loaderPill-floor-shadow"></div>
+      </div>
+      <div class="loaderPill-text">Loading your RX</div>
+  </div>
 </div>
 </body>
 
+<!-- Website footer for some informations and references-->
 <footer>
   <div id="footer">
     <h4>Useful links</h4>
