@@ -18,6 +18,6 @@ $(window).ready(function() {
     }).scroll(); //invoke scroll-handler on page-load
   });
   $(window).on("load",function(){
-   // $(".absCenter").fadeOut("slow");
+    $(".absCenter").fadeOut("slow");
       $(body, html).css('overflow','hidden');
   });
