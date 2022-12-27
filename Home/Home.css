@@ -8,7 +8,7 @@ body{
 }
 .hideMyScroll {
     overflow: hidden;
-    }
+}
 li
 {
     display:inline;
@@ -44,6 +44,7 @@ li
     height: 36px;
 }
 nav ul li a{
+
     text-decoration:none;
     position:relative;
     right:120px;
@@ -53,12 +54,147 @@ nav ul li a{
     font-weight: bold;
     z-index: 1;
 
+
 }
 nav ul li a:hover{
     color:#05a1a8;
     transition:0.5s;
     font-size:24px;
     text-decoration: underline;
+}
+/*Pre Loader*/
+:root {
+    --EASE_INOUT_QUAD: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    --EASE_IN_QUAD: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    --EASE_OUT_QUAD: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    --COLOR_UI_PHARMACY: #237db5;
+    --loaderPill_DURATION: 1800ms;
+}
+
+.absCenter {
+    width:100%;
+    height:100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-image: linear-gradient(#ffffff,#00c8ff);
+    transform: translate(-50%, -50%);
+    z-index:2;
+}
+
+.loaderPill {
+    text-align: center;
+    position: relative;
+    top:200px;
+
+
+}
+
+.loaderPill-anim {
+    height: 160px;
+}
+
+.loaderPill-anim-bounce {
+    animation: loaderPillBounce var(--loaderPill_DURATION) linear infinite;
+}
+
+.loaderPill-anim-flop {
+    transform-origin: 50% 50%;
+    animation: loaderPillFlop var(--loaderPill_DURATION) linear infinite;
+}
+
+.loaderPill-pill {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--COLOR_UI_PHARMACY);
+    background-image: linear-gradient(to right, var(--COLOR_UI_PHARMACY) 50%, #ffffff 50%);
+}
+
+.loaderPill-floor {
+    display: block;
+    text-align: center;
+}
+
+.loaderPill-floor-shadow {
+    display: inline-block;
+    width: 70px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: color(var(--COLOR_UI_PHARMACY) alpha(26%));
+    transform: translateY(-15px);
+    animation: loaderPillScale var(--loaderPill_DURATION) linear infinite;
+}
+
+.loaderPill-text {
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+@keyframes loaderPillBounce {
+    0% {
+        transform: translateY(123px);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    25% {
+        transform: translateY(40px);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    50% {
+        transform: translateY(120px);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    75% {
+        transform: translateY(20px);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    100% {
+        transform: translateY(120px);
+    }
+}
+
+@keyframes loaderPillFlop {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(450deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes loaderPillScale {
+    0%   {
+        transform: translateY(-15px) scale(1, 1);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    25%  {
+        transform: translateY(-15px) scale(0.7, 1);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    50%  {
+        transform: translateY(-15px) scale(1, 1);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    75%  {
+        transform: translateY(-15px) scale(0.6, 1);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    100% {
+        transform: translateY(-15px) scale(1, 1);
+    }
 }
 /*The End of basics*/
 html{
@@ -76,7 +212,7 @@ html{
 #ourservices
 {
     position: relative;
-    top:410px;
+    top:420px;
     left:50px;
     padding: 16px 20px;
     background-color: #05a1a8;
@@ -86,13 +222,17 @@ html{
     z-index:1;
     font-weight: bold;
     letter-spacing: 3px;
+    border-radius:25px;
 }
 
 #ourservices:hover
 {
-  color: white;
+  transition-duration: 0.5s;
+  background-color: #ffffff;
+  color: black;
   cursor: pointer;
   font-size: 21px;
+  
 }
 .logoword{
     color:white;
@@ -157,6 +297,7 @@ html{
     z-index:1;
     font-weight: bold;
     letter-spacing: 3px;
+    border-radius:25px;
 }
 #moreinfo1:hover
 {
@@ -234,6 +375,7 @@ html{
     z-index:1;
     font-weight: bold;
     letter-spacing: 3px;
+    border-radius:25px;
 }
 #moreinfo2:hover
 {
@@ -293,6 +435,7 @@ html{
     z-index:1;
     font-weight: bold;
     letter-spacing: 3px;
+    border-radius:25px;
 }
 #moreinfo3:hover
 {
@@ -363,6 +506,7 @@ html{
     z-index:1;
     font-weight: bold;
     letter-spacing: 3px;
+    border-radius:25px;
 }
 #shopnowbutton:hover
 {
@@ -372,141 +516,6 @@ html{
   font-size: 21px;
 }
 
-
-
-:root {
-    --EASE_INOUT_QUAD: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    --EASE_IN_QUAD: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    --EASE_OUT_QUAD: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    
-    --COLOR_UI_PHARMACY: #237db5;
-    --loaderPill_DURATION: 1800ms;
-}
-
-.absCenter {
-    width:100%;
-    height:100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-image: linear-gradient(#05a1a8,#ffffff);
-    transform: translate(-50%, -50%);
-    z-index:2;
-}
-
-.loaderPill {
-    text-align: center;
-    position: relative;
-    top:200px;
-
-
-}
-
-.loaderPill-anim {
-    height: 160px;
-}
-
-.loaderPill-anim-bounce {
-    animation: loaderPillBounce var(--loaderPill_DURATION) linear infinite;
-}
-
-.loaderPill-anim-flop {
-    transform-origin: 50% 50%;
-    animation: loaderPillFlop var(--loaderPill_DURATION) linear infinite;
-}
-
-.loaderPill-pill {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 80px;
-    height: 30px;
-    border-radius: 15px;
-    border: 1px solid var(--COLOR_UI_PHARMACY);
-    background-image: linear-gradient(to right, var(--COLOR_UI_PHARMACY) 50%, #ffffff 50%);
-}
-
-.loaderPill-floor {
-    display: block;
-    text-align: center;
-}
-
-.loaderPill-floor-shadow {
-    display: inline-block;
-    width: 70px;
-    height: 7px;
-    border-radius: 50%;
-    background-color: color(var(--COLOR_UI_PHARMACY) alpha(26%));
-    transform: translateY(-15px);
-    animation: loaderPillScale var(--loaderPill_DURATION) linear infinite;
-}
-
-.loaderPill-text {
-    font-weight: bold;
-    color: var(--COLOR_UI_PHARMACY);
-    text-transform: uppercase;
-}
-
-@keyframes loaderPillBounce {
-    0% {
-        transform: translateY(123px);
-        animation-timing-function: var(--EASE_OUT_QUAD);
-    }
-    25% {
-        transform: translateY(40px);
-        animation-timing-function: var(--EASE_IN_QUAD);
-    }
-    50% {
-        transform: translateY(120px);
-        animation-timing-function: var(--EASE_OUT_QUAD);
-    }
-    75% {
-        transform: translateY(20px);
-        animation-timing-function: var(--EASE_IN_QUAD);
-    }
-    100% {
-        transform: translateY(120px);
-    }
-}
-
-@keyframes loaderPillFlop {
-    0% {
-        transform: rotate(0);
-    }
-    25% {
-        transform: rotate(90deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    75% {
-        transform: rotate(450deg);
-    }
-    100% {
-        transform: rotate(720deg);
-    }
-}
-
-@keyframes loaderPillScale {
-    0%   {
-        transform: translateY(-15px) scale(1, 1);
-        animation-timing-function: var(--EASE_OUT_QUAD);
-    }
-    25%  {
-        transform: translateY(-15px) scale(0.7, 1);
-        animation-timing-function: var(--EASE_IN_QUAD);
-    }
-    50%  {
-        transform: translateY(-15px) scale(1, 1);
-        animation-timing-function: var(--EASE_OUT_QUAD);
-    }
-    75%  {
-        transform: translateY(-15px) scale(0.6, 1);
-        animation-timing-function: var(--EASE_IN_QUAD);
-    }
-    100% {
-        transform: translateY(-15px) scale(1, 1);
-    }
-}
 /*FOOTER*/
 footer{
     background-color: rgb(239, 245, 245);
