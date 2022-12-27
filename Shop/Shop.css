@@ -27,6 +27,7 @@ li
  }
 .navbar
 {
+    
     border:-1px solid;
    border-radius:5px;
     line-height: 10px;
@@ -56,28 +57,520 @@ nav ul li a:hover{
     font-size:24px;
     text-decoration: underline;
 }
-/*The End of basics*/
-.shoptableleft{
-    background-color: rgb(245, 245, 245);
-    width: 20%;
-    height:42%;
-    position: relative;
-    left:30%;
-    top:30%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin:10px;
+html{
+    height:10px;
 }
-.shoptableright{
-    background-color: rgb(245, 245, 245);
-    width: 20%;
-    height:42%;
+/*Pre Loader*/
+:root {
+    --EASE_INOUT_QUAD: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    --EASE_IN_QUAD: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    --EASE_OUT_QUAD: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    --COLOR_UI_PHARMACY: #237db5;
+    --loaderPill_DURATION: 1800ms;
+}
+
+.absCenter {
+    width:100%;
+    height:100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-image: linear-gradient(#ffffff,#00c8ff);
+    transform: translate(-50%, -50%);
+    z-index:2;
+}
+
+.loaderPill {
+    text-align: center;
     position: relative;
-    left:52%;
-    bottom:57%;
+    top:200px;
+
+
+}
+
+.loaderPill-anim {
+    height: 160px;
+}
+
+.loaderPill-anim-bounce {
+    animation: loaderPillBounce var(--loaderPill_DURATION) linear infinite;
+}
+
+.loaderPill-anim-flop {
+    transform-origin: 50% 50%;
+    animation: loaderPillFlop var(--loaderPill_DURATION) linear infinite;
+}
+
+.loaderPill-pill {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--COLOR_UI_PHARMACY);
+    background-image: linear-gradient(to right, var(--COLOR_UI_PHARMACY) 50%, #ffffff 50%);
+}
+
+.loaderPill-floor {
+    display: block;
+    text-align: center;
+}
+
+.loaderPill-floor-shadow {
+    display: inline-block;
+    width: 70px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: color(var(--COLOR_UI_PHARMACY) alpha(26%));
+    transform: translateY(-15px);
+    animation: loaderPillScale var(--loaderPill_DURATION) linear infinite;
+}
+
+.loaderPill-text {
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+@keyframes loaderPillBounce {
+    0% {
+        transform: translateY(123px);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    25% {
+        transform: translateY(40px);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    50% {
+        transform: translateY(120px);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    75% {
+        transform: translateY(20px);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    100% {
+        transform: translateY(120px);
+    }
+}
+
+@keyframes loaderPillFlop {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(450deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes loaderPillScale {
+    0%   {
+        transform: translateY(-15px) scale(1, 1);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    25%  {
+        transform: translateY(-15px) scale(0.7, 1);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    50%  {
+        transform: translateY(-15px) scale(1, 1);
+        animation-timing-function: var(--EASE_OUT_QUAD);
+    }
+    75%  {
+        transform: translateY(-15px) scale(0.6, 1);
+        animation-timing-function: var(--EASE_IN_QUAD);
+    }
+    100% {
+        transform: translateY(-15px) scale(1, 1);
+    }
+}
+/*The End of basics*/
+h3{
+    text-align: center;
+    font-size:30px;
+    margin:0;
+    padding-top:10px;
+}
+h5{
+    font-size:26px;
+    text-align: center;
+    color:red;
+    margin:0;
+}
+
+.ShopContentOne{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    align-items: center;
+    margin:50px 0;
+}
+.FirstColumn{
+    position: relative;
+    left:400px;
+    bottom:650px;
+    width:20%;
+    margin:15px;
+    box-sizing:border-box;
+    float:left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top:10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.25);
+    transition:0.4s;
+    background: #f2f2f2;
+}
+.FirstColumn:hover{
+    box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transform: translate(0px, -8px);
+}
+.images{
+    width:200px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display:block;
+}
+button{
+    text-align: center;
+    font-size:24px;
+    color:#fff;
+    width:100%;
+    padding:15px;
+    border:0;
+    outline:none;
+    cursor:pointer;
+    margin-top:5px;
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius:20px;
+}
+#addtocart_Stimulan
+{
+    background-color:#05a1a8;
+    color:white;
+    font-family: Nunito;
+}
+#addtocart_Cataflam
+{
+    background-color:#05a1a8;
+    color:white;
+    font-family: Nunito;
+}
+#addtocart_Augmentin{
+    background-color:#05a1a8;
+    color:white;
+    font-family: Nunito;
+}
+
+#negative_Stimulan{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#positive_Stimulan{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#addtocartbtn_Stimulan{
+    position:relative;
+    bottom:10px;
+    width: 50px;
+    height:30px;
+}
+#negative_Cataflam{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#positive_Cataflam{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#addtocartbtn_Cataflam{
+    position:relative;
+    bottom:10px;
+    width: 50px;
+    height:30px;
+}
+
+#negative_Augmentin{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#positive_Augmentin{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#addtocartbtn_Augmentin{
+    position:relative;
+    bottom:10px;
+    width: 50px;
+    height:30px;
+}
+/*Second Column*/
+.ShopContentTwo{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    align-items: center;
+    margin:50px 0;
+}
+.SecondColumn{
+    position: relative;
+    left:400px;
+    bottom:650px;
+    width:20%;
+    margin:15px;
+    box-sizing:border-box;
+    float:left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top:10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.25);
+    transition:0.4s;
+    background: #f2f2f2;
+}
+.SecondColumn:hover{
+    box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transform: translate(0px, -8px);
+}
+#negative_Oxaleptal{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#positive_Oxaleptal{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#addtocart_Oxaleptal
+{
+    background-color:#05a1a8;
+    color:white;
+    font-family: Nunito;
+}
+#addtocartbtn_Oxaleptal{
+    position:relative;
+    bottom:10px;
+    width: 50px;
+    height:30px;
+}
+#negative_Cymbatex{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#positive_Cymbatex{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#addtocart_Cymbatex
+{
+    background-color:#05a1a8;
+    color:white;
+    font-family: Nunito;
+}
+#addtocartbtn_Cymbatex{
+    position:relative;
+    bottom:10px;
+    width: 50px;
+    height:30px;
+}
+#negative_Citra{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#positive_Citra{
+    background-color: #05a1a8;
+    width:50px;
+    height: 50px;
+    border-radius:20px;
+    font-size:25px;
+}
+#addtocart_Citra
+{
+    background-color:#05a1a8;
+    color:white;
+    font-family: Nunito;
+}
+#addtocartbtn_Citra{
+    position:relative;
+    bottom:10px;
+    width: 50px;
+    height:30px;
+}
+
+.Brands{
+    background-color: rgb(245, 245, 245);
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin:10px;
+    padding:10px;
+    margin:20px;
+    width:300px;
+    position: relative;
+   
+}
+.option{
+    display:flex;
+    position: relative;
+    left:50px;
+    bottom:20px;
+    left:40px;
+}
+
+.Med_Menu{
+
+    display:flex;
+    width:30px;
+}
+.Price_Menu{
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding:10px;
+    margin:20px;
+    width:300px;
+    position: relative;
+    
+}
+#PriceFrom{
+    position:relative;
+    width: 70px;
+    height:25px;
+}
+#PriceTo{
+    position:relative;
+    left:50%;
+    bottom:95px;
+    width: 70px;
+    height:25px;
+}
+.ApplyPrice{
+    position: relative;
+    right:20px;
+    background-color: #05a1a8;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius:10px;
+    width:150px;
+}
+.ApplyBrand{
+    position: relative;
+    left:60px;
+    background-color: #05a1a8;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius:10px;
+    width:150px;
+}
+.dropbtn {
+    position: relative;
+    left:460px;
+    background-color: #05a1a8;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-top-left-radius:10px;
+    width:150px;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #05a1a8;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    position: relative;
+    left:460px;
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+ 
+.dropdown a:hover {background-color: #ddd;}
+.show {display: block;}
+
+#Search {
+    position:relative;
+    left:534px;
+    top:58px;   
+    width:500px;
+    background-color: #05a1a8;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+     border: none;
+     border-top-right-radius: 10px;
+    cursor: pointer;
+}
+#Search:focus{
+    outline:none;
+}
+#Search::placeholder{
+    color:white;
 }
 .SortByDiv{
     background-color: rgb(245, 245, 245);
@@ -100,50 +593,57 @@ nav ul li a:hover{
     border: none;
     font-size: 17px;
 }
-
-#Stimulan{
-    position: relative;
-    width:40%;
-    left:80px;
+.PrevNext{
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    right:0;
+    text-decoration: none;
+    display: flex;
+    padding: 8px 16px;
+    z-index: 1;
 }
-#Cataflam{
-    position: relative;
-    width:60%;
-    height:60%;
-    left:20%;
-}
-#Augmentin{
-    position: relative;
-    width:60%;
-    height:60%;
-    left:20%;
-}
-#Catafast{
-    position: relative;
-    width:60%;
-    height:60%;
-    left:20%;
-}
-.addtocart{
-    position:relative;
-    left:34%;
-    bottom:50px;
-    border:1px solid;
-    border-radius:15px;
-    background-color:cornflowerblue;
+.Previous{
+    text-decoration:none;
+    font-weight: bold;
     color:white;
-    height:30px;
-    font-family: Nunito;
-}
-.addtocart:hover{
+    width:200px;
+    height: 35px;
+    margin:15px;
+    box-sizing:border-box;
+    float:left;
+    text-align: center;
+    border-radius: 20px;
     cursor: pointer;
+    padding-top: 8px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.25);
+    transition:0.4s;
+    background: #05a1a8;
 }
-
-.price
-{
-    position: relative;
-    bottom:20px;
-    font-size:20px;
+.Previous:hover{
+    box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transform: translate(0px, -1px);
+}
+.Next{
+    text-decoration:none;
+    font-weight: bold;
+    color:white;
+    width:200px;
+    height: 35px;
+    margin:15px;
+    box-sizing:border-box;
+    float:left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 8px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.25);
+    transition:0.4s;
+    background: #05a1a8;
+}
+.Next:hover{
+    box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transform: translate(0px, -1px);
 }
 /*FOOTER*/
 footer{
